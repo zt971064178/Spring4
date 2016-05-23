@@ -1,6 +1,5 @@
 package cn.itcast.spring4.generic;
 
-import java.lang.annotation.Target;
 import java.util.List;
 import java.util.Map;
 
