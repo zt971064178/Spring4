@@ -1,0 +1,30 @@
+--- !cn.itcast.spring4.annotation.Hero
+birthDate: !java.util.Date "685296000000"
+children: !cn.itcast.spring4.annotation.Hero[]
+  - !cn.itcast.spring4.annotation.Hero
+    id: !java.lang.Long 3
+    name: Quintus
+  - !cn.itcast.spring4.annotation.Hero
+    id: !java.lang.Long 4
+    name: Gaius
+gender: true
+honors: !java.lang.String[]
+  - abcdefg
+  - hijklmn
+  - opqrst
+  - uvwxyz
+id: !java.lang.Long 1
+level: 5
+log: !java.util.LinkedList
+  - log1
+  - log2
+  - log3
+name: Tsybius2014
+spouse: !cn.itcast.spring4.annotation.Hero
+  gender: false
+  honors: !java.lang.String[]
+    - Honor1
+    - Honor2
+  id: !java.lang.Long 2
+  name: Galatea
+
