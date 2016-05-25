@@ -1,15 +1,17 @@
-package cn.itcast.spring4.yaml;
+package cn.itcast.spring4.xml;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-import org.ho.yaml.Yaml;
+import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
-public class YAMLDemoTest {
+import cn.itcast.spring4.yaml.Hero;
+
+public class XMLDemoTest {
 	@Test
-	public void testJava2YAML() {
+	public void testJava2XML() {
 		Hero hero = new Hero();
 
 		hero.setId(1L);
@@ -41,14 +43,15 @@ public class YAMLDemoTest {
 		child2.setName("Gaius");
 		hero.setChildren(new Hero[] {child1, child2});
 
-		String yaml = Yaml.dump(hero);
-		System.out.println(yaml);
+		String xml = XmlParser.parseToXml(hero) ;
+		System.out.println(xml);
 	}
 	
 	@Test
-	public void testYAML2Java() throws FileNotFoundException {
-		// Hero result = (Hero) Yaml.load(Hero.class.getResourceAsStream("hero.yml"));
-		Hero result = Yaml.loadType(Hero.class.getResourceAsStream("hero.yml"), Hero.class); //另一种方法
+	public void testXML2Java() throws IOException {
+		
+		String xml = IOUtils.toString(Hero.class.getClassLoader().getResourceAsStream("cn/itcast/spring4/xml/xml.xml"), "UTF-8") ;
+		Hero result = XmlParser.loadFromXml(xml) ;
 		System.out.println(result);
 	}
 }

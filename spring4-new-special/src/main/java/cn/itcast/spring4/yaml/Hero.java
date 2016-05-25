@@ -1,5 +1,6 @@
-package cn.itcast.spring4.annotation;
+package cn.itcast.spring4.yaml;
 
+import java.beans.ConstructorProperties;
 import java.util.Date;
 import java.util.LinkedList;
 
@@ -24,6 +25,11 @@ public class Hero {
     private Hero spouse;
     // 子女
     private Hero[] children;
+    
+    @ConstructorProperties(value="demo")
+    public Hero() {
+    	
+    }
     
     // Getter & Setter
     public long getId() {
