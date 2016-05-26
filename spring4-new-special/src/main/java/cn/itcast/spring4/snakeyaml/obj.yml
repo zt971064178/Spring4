@@ -1,0 +1,12 @@
+!!cn.itcast.spring4.snakeyaml.Dev {
+  enabled: false,
+  inn: {name: III, timeout: 600000000},
+  port: 33333,
+  type: T1
+}
+--- !!cn.itcast.spring4.snakeyaml.Dev { 
+  enabled: true,
+  inn: {name: UH, timeout: 180003300},
+  port: 10028,
+  type: T2
+}

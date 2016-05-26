@@ -1,0 +1,5 @@
+redis.host: rhost
+redis.port: 6379
+parse.rule:
+    - light
+    - weighted
