@@ -1,13 +1,13 @@
 package cn.itcast.spring4.snakeyaml;
 
+import org.junit.Test;
+import org.yaml.snakeyaml.Yaml;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import org.junit.Test;
-import org.yaml.snakeyaml.Yaml;
 
 public class SnakeYamlDemo {
 	@SuppressWarnings("unchecked")

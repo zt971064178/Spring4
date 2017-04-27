@@ -1,11 +1,11 @@
 package cn.itcast.spring4.yaml;
 
+import org.ho.yaml.Yaml;
+import org.junit.Test;
+
 import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
-import org.ho.yaml.Yaml;
-import org.junit.Test;
 
 public class YAMLDemoTest {
 	@Test

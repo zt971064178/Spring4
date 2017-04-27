@@ -1,12 +1,12 @@
 package cn.itcast.spring4.generic;
 
-import java.util.List;
-import java.util.Map;
-
 import org.junit.Test;
 import org.springframework.core.ResolvableType;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.ReflectionUtils;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  *	Java泛型测试API	
@@ -18,6 +18,7 @@ public class GenericTest {
 		ResolvableType resolvableType = ResolvableType .forClass(ABService.class) ;
 		// 因为我们泛型信息放在 Service<A, B> 上，所以需要resolvableType1.getInterfaces()[0]得到
 		// 通过getGeneric（泛型参数索引）得到某个位置的泛型；resolve()把实际泛型参数解析出来
+		System.out.println(resolvableType.getInterfaces()[0].getGeneric(0).resolve());
 		System.out.println(resolvableType.getInterfaces()[0].getGeneric(1).resolve());
 		resolvableType.getInterfaces()[0].getGeneric(1).resolve() ;
 	}
@@ -82,6 +83,6 @@ public class GenericTest {
         System.out.println(resolvableType1.getComponentType().getGeneric(0).resolve());
         
         // 泛型类型的比较
-        resolvableType.isAssignableFrom(resolvableType1) ;
+		System.out.println(resolvableType.isAssignableFrom(resolvableType1));;
 	}
 }
